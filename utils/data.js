@@ -1,7 +1,7 @@
 import { Html5, JavaScript, Html3, Figma } from "iconsax-react";
 import ReactJs from "@/public/ReactJs.svg";
 import TypeScript from "@/public/TypeScript.svg";
-import Nextjs from "@/public/NextJs.svg";
+import Nextjs from "@/public/Nextjs.svg";
 import Nestjs from "@/public/Nest.svg";
 import Nodejs from "@/public/NodeJs.svg";
 import Mysql from "@/public/mySql.svg";

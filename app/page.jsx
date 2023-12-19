@@ -1,4 +1,6 @@
 import About from "@/components/about/about";
+import Footer from "@/components/footer/footer";
+import Navbar from "@/components/navbar/navbar";
 import Project from "@/components/project/project";
 import Tech from "@/components/tech/tech";
 import { tech, tool } from "@/utils/data";
@@ -9,6 +11,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main>
+      {" "}
       <About />
       <Project />
       <Tech item={tech} title="Tech" />

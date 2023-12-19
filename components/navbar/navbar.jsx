@@ -1,6 +1,5 @@
-"use client";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 
 export default function Navbar() {
   //   const [isOpen, setIsOpen] = useState(false);
@@ -27,9 +26,6 @@ export default function Navbar() {
             className={`text-2xl font-semibold font-pop`}
             data-aos="fade-down"
             data-aos-duration="550"
-            data-scroll
-            data-scroll-speed="0.3"
-            data-scroll-position="top"
           >
             Alfarabi.
           </h1>

@@ -2,22 +2,13 @@
 import "@/styles/globals.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
+import { SmoothScrolling } from "@/utils/smoothScrolling";
+import { useEffect } from "react";
 export default function RootLayout({ children }) {
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll({
-        el: document.querySelector("[data-scroll-container]"),
-        smooth: true,
-      });
-    })();
-  }, []);
-
-  useEffect(() => {
-    AOS.init({});
+    AOS.init();
   }, []);
 
   return (
@@ -25,12 +16,11 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         {" "}
-        <div data-scroll-container>
-          {" "}
+        <SmoothScrolling>
           <Navbar />
           <div className={`mx-auto max-w-lg`}>{children}</div>
-        </div>
-        <Footer />
+          <Footer />
+        </SmoothScrolling>
       </body>
     </html>
   );

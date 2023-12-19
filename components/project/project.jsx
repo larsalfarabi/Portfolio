@@ -1,13 +1,10 @@
 import Divider from "@/utils/divider";
 import { MotionDiv } from "@/utils/motionDiv";
+import { MotionHeader } from "@/utils/motionHeader";
 export default function Project() {
   return (
-    <section>
-      <h1
-        className="text-2xl font-DM_sans text-primary font-extrabold mb-5"
-      >
-        Project
-      </h1>
+    <section className="h-full">
+      <MotionHeader title="Project" />
       <MotionDiv
         className="grid grid-cols-1 sm:grid-cols-2 gap-3"
         data-aos="fade-up"

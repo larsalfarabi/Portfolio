@@ -2,6 +2,7 @@ import CardTech from "@/utils/cardTech";
 import React from "react";
 import { NextPage } from "next";
 import Divider from "@/utils/divider";
+import { MotionHeader } from "@/utils/motionHeader";
 
 interface props {
   item: { icon: JSX.Element; name: string }[];
@@ -29,11 +30,7 @@ const renderItem = (
 const Tech: NextPage<props> = ({ item, title }) => {
   return (
     <section>
-      <h1
-        className="text-2xl font-DM_sans text-primary font-extrabold mb-5"
-      >
-        {title}
-      </h1>
+      <MotionHeader title={`${title}`} />
       <div className="grid grid-cols-3 gap-3">{item.map(renderItem)}</div>{" "}
       <Divider />
     </section>

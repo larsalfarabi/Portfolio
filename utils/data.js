@@ -11,6 +11,7 @@ import VS from "@/public/Figma.svg";
 import Github from "@/public/Github.svg";
 import Image from "next/image";
 import Thumbnail from "@/public/1702027598035.jpg";
+import Expressjs from "@/public/Expressjs.svg";
 
 export const tech = [
   {
@@ -20,7 +21,7 @@ export const tech = [
       "HTML (HyperText Markup Language) is a standard markup language for creating web pages. HTML uses tags to define the structure and content of web pages.",
   },
   {
-    icon: <JavaScript className="h-8 w-8" />,
+    icon: <JavaScript className="h-8 w-8" variant="Bold" />,
     name: "JS",
     content:
       "JS (JavaScript) is a high-level, dynamic programming language used to make web pages more interactive. JavaScript can be used to add a wide variety of functionality to web pages.",
@@ -149,6 +150,22 @@ export const tech = [
     name: "Firebase",
     content:
       "Firebase is a Backend-as-a-Service (BaaS) platform that provides a variety of services to help developers develop web and mobile applications faster.",
+  },
+  {
+    icon: (
+      <Image
+        src={Expressjs}
+        priority
+        width={31.5}
+        height={31.5}
+        color="#e8e8e8"
+        className="text-[#e8e8e8]"
+        alt="Follow us on Twitter"
+      />
+    ),
+    name: "Express",
+    content:
+      "Express.js is a popular choice for RESTful web application development. Express.js is easy to use and configurable, and offers a variety of features that can help developers build fast and efficient web applications.",
   },
 ];
 

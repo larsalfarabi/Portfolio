@@ -16,6 +16,6 @@ export default function Divider() {
   }, []);
 
   return (
-    <div ref={dividerRef} className="my-5 h-[1px] w-0 bg-black opacity-30" />
+    <div ref={dividerRef} className="my-5 h-[1px] bg-black opacity-30" />
   );
 }

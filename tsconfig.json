@@ -37,7 +37,7 @@
     "app/page.jsx",
     "components/navbar/navbar.jsx",
     "components/tech/tech.tsx"
-, "app/email/page.jsx", "utils/motionCard.tsx"  ],
+, "app/email/page.jsx", "utils/motionCard.tsx", "utils/data.js"  ],
   "exclude": [
     "node_modules"
   ]

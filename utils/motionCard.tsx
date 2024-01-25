@@ -7,29 +7,18 @@ import { Autoplay, Parallax } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/parallax";
+import { isMobile } from "react-device-detect";
 
 const MotionCard = () => {
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [slide, setSlide] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (typeof window !== "undefined") {
-        setWindowWidth(window.innerWidth);
-      }
-    };
-
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", handleResize);
+    if (isMobile) {
+      return setSlide(1);
+    } else {
+      return setSlide(1.5);
     }
-
-    return () => {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("resize", handleResize);
-      }
-    };
   }, []);
-
-  const slidesPerView = windowWidth <= 640 ? 1 : 1.5;
 
   const slides = useMemo(
     () =>
@@ -73,7 +62,7 @@ const MotionCard = () => {
         }}
         loop
         parallax={{ enabled: true }}
-        slidesPerView={slidesPerView}
+        slidesPerView={slide}
         spaceBetween={14}
       >
         {" "}

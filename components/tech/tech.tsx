@@ -5,12 +5,12 @@ import Divider from "@/utils/divider";
 import { MotionHeader } from "@/utils/motionHeader";
 
 interface props {
-  item: { icon: JSX.Element; name: string }[];
+  item: { icon: JSX.Element; name: string; content: string }[];
   title: string;
 }
 
 const renderItem = (
-  item: { icon: JSX.Element; name: string },
+  item: { icon: JSX.Element; name: string; content: string },
   index: number,
 ) => {
   const delay = index * 100;
@@ -22,7 +22,7 @@ const renderItem = (
       data-aos-duration="300"
       data-aos-once="true"
     >
-      <CardTech name={item.name} icon={item.icon} />
+      <CardTech name={item.name} icon={item.icon} content={item.content} />
     </div>
   );
 };

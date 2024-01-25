@@ -13,9 +13,24 @@ import Image from "next/image";
 import Thumbnail from "@/public/1702027598035.jpg";
 
 export const tech = [
-  { icon: <Html5 className="h-8 w-8" />, name: "HTML" },
-  { icon: <JavaScript className="h-8 w-8" />, name: "JS" },
-  { icon: <Html3 className="h-8 w-8" />, name: "CSS" },
+  {
+    icon: <Html5 className="h-8 w-8" />,
+    name: "HTML",
+    content:
+      "HTML (HyperText Markup Language) is a standard markup language for creating web pages. HTML uses tags to define the structure and content of web pages.",
+  },
+  {
+    icon: <JavaScript className="h-8 w-8" />,
+    name: "JS",
+    content:
+      "JS (JavaScript) is a high-level, dynamic programming language used to make web pages more interactive. JavaScript can be used to add a wide variety of functionality to web pages.",
+  },
+  {
+    icon: <Html3 className="h-8 w-8" />,
+    name: "CSS",
+    content:
+      "CSS (Cascading Style Sheets) is a programming language used to design and organize the appearance of web pages.",
+  },
   {
     icon: (
       <Image
@@ -28,6 +43,8 @@ export const tech = [
       />
     ),
     name: "TS",
+    content:
+      "TS (TypeScript) is a superset of JavaScript that adds data types and other features to improve security, reliability, and productivity.",
   },
   {
     icon: (
@@ -41,6 +58,8 @@ export const tech = [
       />
     ),
     name: "React",
+    content:
+      "React is a JavaScript library used to build component-based interactive user interfaces.",
   },
   {
     icon: (
@@ -53,6 +72,8 @@ export const tech = [
       />
     ),
     name: "Next",
+    content:
+      "Next.js is a React framework created by Vercel. Next.js offers a variety of features and capabilities that can help developers build modern and responsive web applications.",
   },
   {
     icon: (
@@ -66,6 +87,8 @@ export const tech = [
       />
     ),
     name: "Node",
+    content:
+      "Node.js is a runtime environment that runs outside the browser and uses the JavaScript programming language. Node.js is designed for applications with intensive I/O processes such as network servers or backend API.",
   },
   {
     icon: (
@@ -79,6 +102,8 @@ export const tech = [
       />
     ),
     name: "Nest",
+    content:
+      "NestJS is a web server framework built on Node.js. NestJS offers a variety of additional features and capabilities that can help developers build more complex and scalable web applications.",
   },
   {
     icon: (
@@ -92,6 +117,8 @@ export const tech = [
       />
     ),
     name: "MySQL",
+    content:
+      "MySQL is a popular open-source relational database management system (RDBMS). MySQL is used to store data in various types of applications, including web  , mobile, and desktop.",
   },
   {
     icon: (
@@ -105,6 +132,8 @@ export const tech = [
       />
     ),
     name: "Flutter",
+    content:
+      "Flutter is a mobile, desktop, and web application development framework created by Google. Flutter uses the Dart programming language to build responsive applications that can be used on various platforms.",
   },
   {
     icon: (
@@ -118,6 +147,8 @@ export const tech = [
       />
     ),
     name: "Firebase",
+    content:
+      "Firebase is a Backend-as-a-Service (BaaS) platform that provides a variety of services to help developers develop web and mobile applications faster.",
   },
 ];
 
@@ -134,6 +165,9 @@ export const tool = [
       />
     ),
     name: "VS Code",
+    title: "It means",
+    content:
+      "VS Code (Visual Studio Code) is a popular code editor for web developers, software developers, and data scientists.",
   },
   {
     icon: (
@@ -147,10 +181,14 @@ export const tool = [
       />
     ),
     name: "Github",
+    content:
+      "Github is a popular source code hosting service for software development. Github allows developers to store, share, and collaborate on their code.",
   },
   {
     icon: <Figma className="h-8 w-8" />,
     name: "Figma",
+    content:
+      "Figma is a cloud-based design application used to create user interfaces (UI) and user experiences (UX).",
   },
 ];
 

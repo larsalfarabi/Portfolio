@@ -11,7 +11,7 @@ interface props {
 
 const renderItem = (
   item: { icon: JSX.Element; name: string },
-  index: number
+  index: number,
 ) => {
   const delay = index * 100;
   return (

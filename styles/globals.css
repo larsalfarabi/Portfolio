@@ -6,12 +6,19 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  color: inherit;
+  background: #3030301a;
+}
+
+::-moz-selection {
+  color: inherit;
+  background: #3030301a;
+}
+
 body {
   /* background-color: #fff !important; */
-  background-image: radial-gradient(
-    hsla(0, 0%, 35%, 0.5) 1px,
-    #f9f9e5 0
-  );
+  background-image: radial-gradient(hsla(0, 0%, 35%, 0.5) 1px, #f9f9e5 0);
   background-size: 2rem 2rem;
 }
 
@@ -27,7 +34,7 @@ body {
   @apply rounded-full border-[2px] bg-black bg-opacity-30;
 }
 
-.card{
+.card {
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -7,7 +7,7 @@ export default function Sosmed() {
       link: "https://www.linkedin.com/in/muhammad-syamil-226a372a3/",
     },
     { name: "Github", link: "https://github.com/larsalfarabi" },
-    { name: "Mail", link: "/email" },
+    { name: "Bento", link: "https://bento.me/alfarabi" },
   ];
   return (
     <div className="mt-9 flex gap-2">

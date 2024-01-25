@@ -1,10 +1,6 @@
 "use client";
 import gsap from "gsap";
-import { CustomEase } from "gsap/dist/CustomEase";
 import { useEffect, useRef } from "react";
-
-gsap.registerPlugin(CustomEase);
-CustomEase.create("cubic-text", "0.25, 1, 0.5, 1");
 
 export const MotionHeader = ({ title }: { title: string }) => {
   const boxRef = useRef(null);
@@ -18,7 +14,7 @@ export const MotionHeader = ({ title }: { title: string }) => {
 
         tl.to([boxRef.current, el], {
           y: 0,
-          duration: 1.5,
+          duration: 1,
         });
       });
 
@@ -27,7 +23,7 @@ export const MotionHeader = ({ title }: { title: string }) => {
   }, []);
   return (
     <h1
-      className="h-title relative w-full text-2xl font-DM_sans text-primary font-extrabold mb-5"
+      className="h-title relative mb-5 w-full font-DM_sans text-2xl font-extrabold text-primary"
       ref={boxRef}
     >
       <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">

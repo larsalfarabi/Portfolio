@@ -10,11 +10,12 @@ import Firebase from "@/public/firebase.svg";
 import VS from "@/public/Figma.svg";
 import Github from "@/public/Github.svg";
 import Image from "next/image";
+import Thumbnail from "@/public/1702027598035.jpg";
 
 export const tech = [
-  { icon: <Html5 className="w-8 h-8" />, name: "HTML" },
-  { icon: <JavaScript className="w-8 h-8" />, name: "JS" },
-  { icon: <Html3 className="w-8 h-8" />, name: "CSS" },
+  { icon: <Html5 className="h-8 w-8" />, name: "HTML" },
+  { icon: <JavaScript className="h-8 w-8" />, name: "JS" },
+  { icon: <Html3 className="h-8 w-8" />, name: "CSS" },
   {
     icon: (
       <Image
@@ -24,7 +25,6 @@ export const tech = [
         height={32}
         color="#e8e8e8"
         alt="Follow us on Twitter"
-        className="select-none"
       />
     ),
     name: "TS",
@@ -38,7 +38,6 @@ export const tech = [
         height={32}
         color="#e8e8e8"
         alt="Follow us on Twitter"
-        className="select-none"
       />
     ),
     name: "React",
@@ -51,7 +50,6 @@ export const tech = [
         width={32}
         height={32}
         alt="Follow us on Twitter"
-        className="select-none"
       />
     ),
     name: "Next",
@@ -65,7 +63,6 @@ export const tech = [
         height={32}
         color="#e8e8e8"
         alt="Follow us on Twitter"
-        className="select-none"
       />
     ),
     name: "Node",
@@ -79,7 +76,6 @@ export const tech = [
         height={32}
         color="#e8e8e8"
         alt="Follow us on Twitter"
-        className="select-none"
       />
     ),
     name: "Nest",
@@ -93,7 +89,6 @@ export const tech = [
         height={32}
         color="#e8e8e8"
         alt="Follow us on Twitter"
-        className="select-none"
       />
     ),
     name: "MySQL",
@@ -107,7 +102,6 @@ export const tech = [
         height={25.5}
         color="#e8e8e8"
         alt="Follow us on Twitter"
-        className="select-none"
       />
     ),
     name: "Flutter",
@@ -121,7 +115,6 @@ export const tech = [
         height={23}
         color="#e8e8e8"
         alt="Follow us on Twitter"
-        className="select-none"
       />
     ),
     name: "Firebase",
@@ -138,7 +131,6 @@ export const tool = [
         height={32}
         color="#e8e8e8"
         alt="Follow us on Twitter"
-        className="select-none"
       />
     ),
     name: "VS Code",
@@ -152,13 +144,30 @@ export const tool = [
         height={33}
         color="#e8e8e8"
         alt="Follow us on Twitter"
-        className="select-none"
       />
     ),
     name: "Github",
   },
   {
-    icon: <Figma className="w-8 h-8" />,
+    icon: <Figma className="h-8 w-8" />,
     name: "Figma",
+  },
+];
+
+export const project = [
+  {
+    thumbnail: Thumbnail,
+    name: "Umrah",
+    tahun: "2023",
+  },
+  {
+    thumbnail: Thumbnail,
+    name: "Kec. Jonggol",
+    tahun: "2023",
+  },
+  {
+    thumbnail: Thumbnail,
+    name: "Freshly Juice",
+    tahun: "2022",
   },
 ];

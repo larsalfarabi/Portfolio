@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import { Analytics } from "@vercel/analytics/react";
-
+import Cursor from "@/utils/cursor";
 export default function RootLayout({ children }) {
   useEffect(() => {
     AOS.init();
@@ -17,9 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head />
-      <body >
+      <body>
         <div>
           <SmoothScrolling>
+            <Cursor />
             <Navbar />
             <div className={`mx-auto max-w-lg px-5 pb-5 md:px-0`}>
               {children}

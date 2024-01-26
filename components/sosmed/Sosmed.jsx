@@ -24,7 +24,7 @@ export default function Sosmed() {
             data-aos="fade-up"
             data-aos-duration="550"
           >
-            <p className="font-medium font-DM_sans">{item?.name}</p>
+            <p className="font-DM_sans font-medium">{item?.name}</p>
             <ArrowRight size={14} className="-rotate-45" variant="TwoTone" />
           </Link>
         );

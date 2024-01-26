@@ -1,4 +1,5 @@
 "use client";
+
 import "@/styles/globals.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useMemo, useState } from "react";

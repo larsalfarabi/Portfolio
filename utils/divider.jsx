@@ -19,7 +19,7 @@ export default function Divider() {
     <motion.div
       initial={{ width: 0 }}
       animate={{ width: width }}
-      transition={{ delay: 0.5, duration: 2, ease: "easeIn" }}
+      transition={{ delay: 0.5, duration: 1.5, ease: "easeIn" }}
       className=" my-5 h-[1px] bg-black opacity-30"
     />
   );

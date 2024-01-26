@@ -35,7 +35,7 @@ export default function About() {
       </h1>{" "}
       <Sosmed />
       <p
-        className="mt-9 font-DM_sans text-lg font-medium tracking-wide text-primary"
+        className="mt-9 text-justify font-DM_sans text-base font-medium tracking-wide text-primary lg:text-lg"
         data-aos="fade-up"
         data-aos-duration="550"
       >

@@ -1,6 +1,5 @@
 import { ArrowRight } from "iconsax-react";
 import Link from "next/link";
-import { Z_BEST_COMPRESSION } from "zlib";
 export default function Sosmed() {
   const sosmed = [
     {

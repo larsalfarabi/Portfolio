@@ -18,16 +18,17 @@ export default function Cursor() {
       width: "60px",
       ease: "back.out",
       duration: 0.5,
+      animationDuration: 1,
     }).to(text.current, { opacity: 1, fontSize: "14px" }, 0);
 
     images.forEach((img) => {
-      img.addEventListener("mouseenter", function () {
+      img.addEventListener("mouseenter", () => {
         tl.play();
       });
 
-      img.addEventListener("mouseleave", function () {
+      img.addEventListener("mouseleave", () => {
         tl.reverse();
-        tl.eventCallback("onReverseComplete", function () {
+        tl.eventCallback("onReverseComplete", () => {
           gsap.set(text.current, { opacity: 0 }); // Hide the text element
           gsap.set(curs.current, {
             height: "0px",
@@ -53,7 +54,7 @@ export default function Cursor() {
   return (
     <div
       ref={curs}
-      className="cursor pointer-events-none fixed left-1/2 top-1/2 z-[999] hidden -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#E8E8E8] sm:flex"
+      className="pointer-events-none fixed left-1/2 top-1/2 z-[999] hidden -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#E8E8E8] sm:flex"
       style={{ left: `${x}px`, top: `${y}px` }}
     >
       <p ref={text} className="font-DM_sans text-[0px] font-semibold opacity-0">

@@ -17,7 +17,6 @@
 }
 
 body {
-  /* background-color: #fff !important; */
   background-image: radial-gradient(hsla(0, 0%, 35%, 0.5) 1px, #f9f9e5 0);
   background-size: 2rem 2rem;
 }

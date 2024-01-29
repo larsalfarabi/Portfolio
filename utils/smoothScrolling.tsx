@@ -7,7 +7,7 @@ export const SmoothScrolling = ({ children }: { children: any }) => {
       root
       options={{
         lerp: 0.1,
-        duration: 1.5,
+        duration: 1.75,
         smoothTouch: true,
       }}
     >

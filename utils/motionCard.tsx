@@ -26,9 +26,11 @@ const MotionCard = () => {
       project.map((_, index) => (
         <SwiperSlide key={index}>
           <div
-            className={`img flex h-[214px] w-full flex-col justify-end rounded-lg bg-base_col px-3 py-4`}
+            className={`img group flex h-[220px] w-full flex-col justify-end gap-3 rounded-lg bg-base_col px-2.5 py-3`}
           >
-            <div className="flex items-end justify-end gap-1.5">
+            <div className="h-full w-full rounded-[10px] bg-gradient-to-br from-[#606060] to-[#505050]"></div>
+
+            <div className="flex items-end justify-end gap-1.5 transition duration-200 group-hover:-translate-x-2">
               <p
                 className="sm w-fit rounded-full border border-[#E8E8E8] px-2.5 font-DM_sans text-sm  font-medium text-[#E8E8E8]"
                 data-swiper-parallax-x="-100"
@@ -53,7 +55,7 @@ const MotionCard = () => {
   );
 
   return (
-    <div data-aos="fade-up" data-aos-duration="550">
+    <div data-aos="fade-up" data-aos-duration="550 ">
       <Swiper
         modules={[Autoplay, Parallax]}
         autoplay={{

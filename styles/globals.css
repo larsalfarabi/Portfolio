@@ -17,7 +17,7 @@
 }
 
 body {
-  background-image: radial-gradient(hsla(0, 0%, 35%, 0.5) 1px, #f9f9e5 0);
+  background-image: radial-gradient(hsla(0, 0%, 35%, 0.45) 1px, #f9f9e5 0);
   background-size: 2rem 2rem;
 }
 
@@ -41,6 +41,7 @@ body {
   padding: 8px 12px;
   color: #303030;
   background-color: #3030300d;
+  backdrop-filter: blur(2px);
   border-radius: 8px;
   z-index: 1;
   position: relative;

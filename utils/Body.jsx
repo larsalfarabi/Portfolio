@@ -22,7 +22,7 @@ export default function Body({ phrases }) {
     }),
   };
   return (
-    <div className="h-screen py-[100%] text-[3vw]">
+    <div className="flex h-screen flex-col items-center justify-center text-[3vw]">
       {" "}
       <AnimatePresence mode="wait">
         {phrases.map((phrase, i) => {

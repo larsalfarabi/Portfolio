@@ -28,7 +28,7 @@ const MotionCard = () => {
           <div
             className={`img group flex h-[220px] w-full flex-col justify-end gap-3 rounded-lg bg-base_col px-2.5 py-3`}
           >
-            <div className="h-full w-full rounded-[10px] bg-gradient-to-br from-[#606060] to-[#505050]"></div>
+            <div className="box_shadow h-full w-full rounded-[10px] bg-[#404040] "></div>
 
             <div className="flex items-end justify-end gap-1.5 transition duration-200 group-hover:-translate-x-2">
               <p

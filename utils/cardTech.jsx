@@ -5,13 +5,14 @@ export default function CardTech(props) {
   return (
     <Tooltip
       showArrow={true}
+
       content={
         <div className="px-1 py-2 font-DM_sans">
           <div className="text-sm font-semibold">It means</div>
           <div className="text-[13px] leading-[18px]">{props.content}</div>
         </div>
       }
-      className="max-w-xs bg-[#fbf8f8] text-justify text-black"
+      className="max-w-xs bg-[#fbf8f8] text-justify text-black shadow-large"
       triggerScaleOnOpen={true}
     >
       <div className="select-none rounded-lg bg-base_col text-[#e8e8e8] duration-500 hover:bg-[#303030]">

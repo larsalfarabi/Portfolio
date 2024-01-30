@@ -6,7 +6,7 @@ export default function SplashScreen() {
   const phrases = ["© Folio 2023", "Lars alfarabi"];
   return (
     <motion.div
-      className="h-screen overflow-hidden"
+      className="h-screen overflow-hidden bg-gradient-to-br from-[#303030] to-[#505050]"
       variants={height}
       initial="intial"
       animate="enter"

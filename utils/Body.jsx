@@ -1,5 +1,5 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 export default function Body({ phrases }) {
   const animation = {
     initial: { y: "100%" },
@@ -22,26 +22,24 @@ export default function Body({ phrases }) {
     }),
   };
   return (
-    <div className="flex h-screen flex-col items-center justify-center text-[3vw]">
+    <div className="flex h-screen flex-col items-center justify-center text-[45px]">
       {" "}
-      <AnimatePresence mode="wait">
-        {phrases.map((phrase, i) => {
-          return (
-            <div className="overflow-hidden" key={i}>
-              <motion.p
-                className="m-0 font-DM_sans font-bold"
-                custom={i}
-                variants={animation}
-                initial="initial"
-                animate={"enter"}
-                exit={"exit"}
-              >
-                {phrase}
-              </motion.p>
-            </div>
-          );
-        })}
-      </AnimatePresence>
+      {phrases.map((phrase, i) => {
+        return (
+          <div className="overflow-hidden" key={i}>
+            <motion.p
+              className="m-0 font-DM_sans font-bold text-[#e8e8e8]"
+              custom={i}
+              variants={animation}
+              initial="initial"
+              animate={"enter"}
+              exit={"exit"}
+            >
+              {phrase}
+            </motion.p>
+          </div>
+        );
+      })}
     </div>
   );
 }

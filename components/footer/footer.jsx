@@ -14,7 +14,7 @@ export default function Footer() {
           exit="exit"
         >
           <span>Made by:</span>
-          Pt. AIDIA Makmur
+          Pt. AIDIA Makmur Indonesia
         </motion.li>
       </ul>
       <ul>

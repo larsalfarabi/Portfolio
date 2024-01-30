@@ -26,7 +26,8 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",
@@ -36,8 +37,11 @@
     "app/layout.jsx",
     "app/page.jsx",
     "components/navbar/navbar.jsx",
-    "components/tech/tech.tsx"
-, "app/email/page.jsx", "utils/motionCard.tsx", "utils/data.js"  ],
+    "components/tech/tech.tsx",
+    "app/email/page.jsx",
+    "utils/motionCard.tsx",
+    "utils/data.js"
+  ],
   "exclude": [
     "node_modules"
   ]

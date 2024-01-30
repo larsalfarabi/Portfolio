@@ -1,16 +1,66 @@
-import { ScrollToTop } from "../../utils/scrollToTop";
+"use client";
+import { motion } from "framer-motion";
+import styles from "./footer.module.css";
+import { translate } from "../header/anim";
 export default function Footer() {
   return (
-    <div>
-      <div className="flex items-end justify-between">
-        <div className="flex select-none flex-col items-start font-DM_sans text-[clamp(.75rem,3vw,1rem)] text-primary">
-          <p>
-            © Folio 2023 <span className="font-semibold">LARS ALFARABI</span>
-          </p>
-          <p>Site designed and coded with ❤️‍🔥</p>
-        </div>
-        <ScrollToTop />
-      </div>
+    <div className={styles.footer}>
+      <ul>
+        <motion.li
+          custom={[0.3, 0]}
+          variants={translate}
+          initial="intial"
+          animate="enter"
+          exit="exit"
+        >
+          <span>Made by:</span>
+          Pt. AIDIA Makmur
+        </motion.li>
+      </ul>
+      <ul>
+        <motion.li
+          custom={[0.3, 0]}
+          variants={translate}
+          initial="intial"
+          animate="enter"
+          exit="exit"
+        >
+          <span> Typograpy:</span>
+          Google Fonts
+        </motion.li>
+      </ul>
+      <ul>
+        <motion.li
+          custom={[0.3, 0]}
+          variants={translate}
+          initial="intial"
+          animate="enter"
+          exit="exit"
+        >
+          {" "}
+          <span>Images:</span> Freepik, Envato
+        </motion.li>
+      </ul>
+      <ul>
+        <motion.li
+          custom={[0.3, 0]}
+          variants={translate}
+          initial="intial"
+          animate="enter"
+          exit="exit"
+        >
+          Privacy Police
+        </motion.li>
+        <motion.li
+          custom={[0.3, 0]}
+          variants={translate}
+          initial="intial"
+          animate="enter"
+          exit="exit"
+        >
+          Terms & Conditions
+        </motion.li>
+      </ul>
     </div>
   );
 }

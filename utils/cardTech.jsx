@@ -8,7 +8,7 @@ export default function CardTech(props) {
 
       content={
         <div className="px-1 py-2 font-DM_sans">
-          <div className="text-sm font-semibold">It means</div>
+          <div className="text-sm font-semibold select-none">It means</div>
           <div className="text-[13px] leading-[18px]">{props.content}</div>
         </div>
       }

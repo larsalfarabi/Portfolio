@@ -28,7 +28,7 @@ export default function Body({ phrases }) {
         return (
           <div className="overflow-hidden" key={i}>
             <motion.p
-              className="m-0 font-DM_sans font-bold text-[#e8e8e8]"
+              className="-my-1.5 select-none font-DM_sans font-bold text-[#e8e8e8]"
               custom={i}
               variants={animation}
               initial="initial"

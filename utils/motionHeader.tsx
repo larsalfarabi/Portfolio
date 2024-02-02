@@ -23,7 +23,7 @@ export const MotionHeader = ({ title }: { title: string }) => {
   }, []);
   return (
     <h1
-      className="h-title relative mb-5 w-full font-DM_sans text-2xl font-extrabold text-primary"
+      className="h-title relative mb-5 w-full select-none font-DM_sans text-2xl font-extrabold text-primary"
       ref={boxRef}
     >
       <span className="-mb-1.5 -mt-6 inline-block overflow-hidden align-bottom">

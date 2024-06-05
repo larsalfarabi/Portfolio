@@ -217,11 +217,6 @@ export const project = [
   },
   {
     thumbnail: Thumbnail,
-    name: "Kec. Jonggol",
-    tahun: "2023",
-  },
-  {
-    thumbnail: Thumbnail,
     name: "Freshly Juice",
     tahun: "2022",
   },

@@ -3,7 +3,7 @@ import Body from "@/utils/Body";
 import { height } from "@/utils/anim";
 import { motion } from "framer-motion";
 export default function SplashScreen() {
-  const phrases = ["© Folio 2023", "Lars Alfarabi"];
+  const phrases = ["© Folio 2024", "Lars Alfarabi"];
   return (
     <motion.div
       className="h-screen overflow-hidden bg-gradient-to-br from-[#303030] to-[#505050]"

@@ -4,7 +4,7 @@ export default function Sosmed() {
   const sosmed = [
     {
       name: "LinkedIn",
-      link: "https://www.linkedin.com/in/lars-alfarabi-226a372a3/",
+      link: "https://www.linkedin.com/in/larsalfarabi/",
     },
     { name: "Github", link: "https://github.com/larsalfarabi" },
     { name: "Bento", link: "https://bento.me/alfarabi" },

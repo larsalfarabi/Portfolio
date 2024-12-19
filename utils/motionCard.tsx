@@ -26,9 +26,9 @@ const MotionCard = () => {
       project.map((_, index) => (
         <SwiperSlide key={index}>
           <div
-            className={`img group flex h-[220px] w-full cursor-pointer flex-col justify-end gap-3 rounded-lg bg-base_col px-2.5 py-3`}
+            className={`img group flex h-[250px] w-full cursor-pointer flex-col justify-end gap-3 rounded-lg bg-base_col px-2.5 py-3`}
           >
-            <div className="box_shadow h-full w-full rounded-[10px] bg-[#404040] "></div>
+            <div className="h-full w-full rounded-[10px] bg-[#404040] "></div>
 
             <div className="flex items-end justify-end gap-1.5 transition duration-200 group-hover:-translate-x-2">
               <p

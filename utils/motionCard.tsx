@@ -31,10 +31,12 @@ const MotionCard = () => {
             <div className="box_shadow h-full w-full rounded-[10px] bg-[#404040] "></div>
 
             <div className="flex items-center justify-between">
-              <p className="text-[#E8E8E8] text-base capitalize">{_.name}</p>
+              <p className="text-[#E8E8E8] font-DM_sans font-medium text-lg capitalize">
+                {_.name}
+              </p>
               <div className="flex gap-1.5">
                 <p
-                  className="w-fit rounded-full border border-[#E8E8E8] px-2.5 font-DM_sans text-xs  font-medium text-[#E8E8E8] uppercase"
+                  className="w-fit rounded-full border border-[#E8E8E8] px-2.5 font-DM_sans text-xs font-normal text-[#E8E8E8] uppercase"
                   data-swiper-parallax-x="-100"
                   data-swiper-parallax-opacity="0"
                   data-swiper-parallax-duration="750"
@@ -42,7 +44,7 @@ const MotionCard = () => {
                   Development
                 </p>
                 <p
-                  className="w-fit rounded-full border border-[#E8E8E8] px-2.5 font-DM_sans text-xs  font-medium text-[#E8E8E8] uppercase"
+                  className="w-fit rounded-full border border-[#E8E8E8] px-2.5 font-DM_sans text-xs  font-normal text-[#E8E8E8] uppercase"
                   data-swiper-parallax-x="-100"
                   data-swiper-parallax-opacity="0"
                   data-swiper-parallax-duration="750"
@@ -50,7 +52,7 @@ const MotionCard = () => {
                   {_.role}
                 </p>
                 <p
-                  className="w-fit rounded-full bg-[#E8E8E8] px-2.5 font-DM_sans text-sm font-medium text-base_col"
+                  className="w-fit rounded-full bg-[#E8E8E8] px-2.5 font-DM_sans text-sm font-normal text-base_col"
                   data-swiper-parallax-x="-110"
                   data-swiper-parallax-opacity="0"
                   data-swiper-parallax-duration="750"

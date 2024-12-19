@@ -30,31 +30,34 @@ const MotionCard = () => {
           >
             <div className="box_shadow h-full w-full rounded-[10px] bg-[#404040] "></div>
 
-            <div className="flex items-end justify-end gap-1.5 transition duration-200 group-hover:-translate-x-2">
-              <p
-                className="sm w-fit rounded-full border border-primary px-2.5 font-DM_sans text-sm  font-medium text-primary uppercase"
-                data-swiper-parallax-x="-100"
-                data-swiper-parallax-opacity="0"
-                data-swiper-parallax-duration="750"
-              >
-                Development
-              </p>
-              <p
-                className="sm w-fit rounded-full border border-primary px-2.5 font-DM_sans text-sm  font-medium text-primary uppercase"
-                data-swiper-parallax-x="-100"
-                data-swiper-parallax-opacity="0"
-                data-swiper-parallax-duration="750"
-              >
-                {_.role}
-              </p>
-              <p
-                className="w-fit rounded-full bg-primary px-2.5 font-DM_sans text-sm font-medium text-base_col"
-                data-swiper-parallax-x="-110"
-                data-swiper-parallax-opacity="0"
-                data-swiper-parallax-duration="750"
-              >
-                {_.tahun}
-              </p>
+            <div className="flex items-center justify-between">
+              <p className="text-[#E8E8E8] text-base capitalize">{_.name}</p>
+              <div className="flex gap-1.5">
+                <p
+                  className="w-fit rounded-full border border-[#E8E8E8] px-2.5 font-DM_sans text-xs  font-medium text-[#E8E8E8] uppercase"
+                  data-swiper-parallax-x="-100"
+                  data-swiper-parallax-opacity="0"
+                  data-swiper-parallax-duration="750"
+                >
+                  Development
+                </p>
+                <p
+                  className="w-fit rounded-full border border-[#E8E8E8] px-2.5 font-DM_sans text-xs  font-medium text-[#E8E8E8] uppercase"
+                  data-swiper-parallax-x="-100"
+                  data-swiper-parallax-opacity="0"
+                  data-swiper-parallax-duration="750"
+                >
+                  {_.role}
+                </p>
+                <p
+                  className="w-fit rounded-full bg-[#E8E8E8] px-2.5 font-DM_sans text-sm font-medium text-base_col"
+                  data-swiper-parallax-x="-110"
+                  data-swiper-parallax-opacity="0"
+                  data-swiper-parallax-duration="750"
+                >
+                  {_.tahun}
+                </p>
+              </div>
             </div>
           </div>
         </SwiperSlide>

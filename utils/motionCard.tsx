@@ -17,7 +17,7 @@ const MotionCard = () => {
     if (isMobile) {
       return setSlide(1);
     } else {
-      return setSlide(1.5);
+      return setSlide(1);
     }
   }, []);
 
@@ -26,7 +26,7 @@ const MotionCard = () => {
       project.map((_, index) => (
         <SwiperSlide key={index}>
           <div
-            className={`img group flex h-[220px] w-full cursor-pointer flex-col justify-end gap-3 rounded-lg bg-base_col px-2.5 py-3`}
+            className={`img group flex h-[250px] w-full cursor-pointer flex-col justify-end gap-3 rounded-lg bg-base_col px-2.5 py-3`}
           >
             <div className="box_shadow h-full w-full rounded-[10px] bg-[#404040] "></div>
 

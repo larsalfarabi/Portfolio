@@ -17,7 +17,7 @@ const MotionCard = () => {
     if (isMobile) {
       return setSlide(1);
     } else {
-      return setSlide(1.5);
+      return setSlide(1);
     }
   }, []);
 

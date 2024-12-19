@@ -212,12 +212,7 @@ export const tool = [
 export const project = [
   {
     thumbnail: Thumbnail,
-    name: "Umrah",
+    name: "Rihlatul",
     tahun: "2023",
-  },
-  {
-    thumbnail: Thumbnail,
-    name: "Freshly Juice",
-    tahun: "2022",
   },
 ];

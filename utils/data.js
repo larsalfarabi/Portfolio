@@ -213,6 +213,8 @@ export const project = [
   {
     thumbnail: Thumbnail,
     name: "Rihlatul",
+    description: "Umrah guide",
+    role: "Back End",
     tahun: "2023",
   },
 ];

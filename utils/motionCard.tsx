@@ -32,12 +32,20 @@ const MotionCard = () => {
 
             <div className="flex items-end justify-end gap-1.5 transition duration-200 group-hover:-translate-x-2">
               <p
-                className="sm w-fit rounded-full border border-[#E8E8E8] px-2.5 font-DM_sans text-sm  font-medium text-[#E8E8E8]"
+                className="sm w-fit rounded-full border border-[#E8E8E8] px-2.5 font-DM_sans text-sm  font-medium text-[#E8E8E8] uppercase"
                 data-swiper-parallax-x="-100"
                 data-swiper-parallax-opacity="0"
                 data-swiper-parallax-duration="750"
               >
-                {_.name}
+                Development
+              </p>
+              <p
+                className="sm w-fit rounded-full border border-[#E8E8E8] px-2.5 font-DM_sans text-sm  font-medium text-[#E8E8E8] uppercase"
+                data-swiper-parallax-x="-100"
+                data-swiper-parallax-opacity="0"
+                data-swiper-parallax-duration="750"
+              >
+                {_.role}
               </p>
               <p
                 className="w-fit rounded-full bg-[#E8E8E8] px-2.5 font-DM_sans text-sm font-medium text-base_col"
@@ -51,7 +59,7 @@ const MotionCard = () => {
           </div>
         </SwiperSlide>
       )),
-    [project],
+    [project]
   );
 
   return (

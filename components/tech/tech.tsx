@@ -1,37 +1,53 @@
 import CardTech from "@/utils/cardTech";
-import React from "react";
-import { NextPage } from "next";
 import Divider from "@/utils/divider";
 import { MotionHeader } from "@/utils/motionHeader";
 
-interface props {
-  item: { icon: JSX.Element; name: string; content: string }[];
-  title: string;
+interface TechItem {
+  icon: JSX.Element;
+  name: string;
+  content: string;
 }
 
-const renderItem = (
-  item: { icon: JSX.Element; name: string; content: string },
-  index: number,
-) => {
-  const delay = index * 100;
-  return (
-    <div
-      key={item.name}
-      data-aos="zoom-in"
-      data-aos-delay={delay}
-      data-aos-duration="300"
-      data-aos-once="true"
-    >
-      <CardTech name={item.name} icon={item.icon} content={item.content} />
-    </div>
-  );
-};
+interface props {
+  tech: TechItem[];
+  tool: TechItem[];
+  ai: TechItem[];
+}
 
-const Tech: NextPage<props> = ({ item, title }) => {
+const Tech = ({ tech, tool, ai }: props) => {
+  // Kelompok dengan data kosong tidak dirender, jadi tidak ada heading menggantung.
+  const groups = [
+    { title: "Teknologi Inti", items: tech },
+    { title: "Perangkat & Tools", items: tool },
+    { title: "Pengembangan Berbantuan AI", items: ai },
+  ].filter((group) => group.items.length > 0);
+
   return (
-    <section>
-      <MotionHeader title={`${title}`} />
-      <div className="grid grid-cols-3 gap-3">{item.map(renderItem)}</div>{" "}
+    <section id="keahlian" className="scroll-mt-20">
+      <MotionHeader title="Keahlian" meta="Stack yang saya pakai" />
+
+      <div className="space-y-12">
+        {groups.map((group) => (
+          <div key={group.title} data-reveal>
+            <p className="meta-label mb-2">{group.title}</p>
+            <ul
+              data-reveal-list
+              className="grid grid-cols-2 gap-x-8 sm:grid-cols-3 lg:grid-cols-4"
+            >
+              {group.items.map((item) => (
+                <li key={item.name}>
+                  <CardTech
+                    name={item.name}
+                    icon={item.icon}
+                    content={item.content}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
       <Divider />
     </section>
   );

@@ -22,13 +22,13 @@ export default function Body({ phrases }) {
     }),
   };
   return (
-    <div className="flex h-screen flex-col items-center justify-center text-[45px]">
+    <div className="flex h-screen flex-col items-center justify-center text-[45px] tracking-[-2.5px]">
       {" "}
       {phrases.map((phrase, i) => {
         return (
           <div className="overflow-hidden" key={i}>
             <motion.p
-              className="-my-1.5 select-none font-DM_sans font-bold text-[#e8e8e8]"
+              className="-my-1.5 select-none font-sans font-bold text-[var(--text-color)]"
               custom={i}
               variants={animation}
               initial="initial"

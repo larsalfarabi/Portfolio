@@ -27,9 +27,8 @@ module.exports = {
         base_col_darker: "#151E31",
       },
       fontFamily: {
-        pop: ["Poppins", "sans-serif"],
-        DM_sans: ["DM Sans", "sans-serif"],
-        roboto_mono: ["Roboto Mono", "monospace"],
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        // mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
     },
   },

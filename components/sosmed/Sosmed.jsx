@@ -1,33 +1,26 @@
-import { ArrowRight } from "iconsax-react";
-import Link from "next/link";
+import { sosmed } from "@/utils/data";
+
 export default function Sosmed() {
-  const sosmed = [
-    {
-      name: "LinkedIn",
-      link: "https://www.linkedin.com/in/larsalfarabi/",
-    },
-    { name: "Github", link: "https://github.com/larsalfarabi" },
-    { name: "Bento", link: "https://bento.me/alfarabi" },
-  ];
   return (
-    <div className="mt-9 flex gap-2">
-      {sosmed.map((item, index) => {
-        const delay = index * 100;
-        return (
-          <Link
-            key={index}
-            href={item.link}
+    <ul data-reveal-list className="flex flex-wrap gap-x-6 gap-y-2">
+      {sosmed.map((item) => (
+        <li key={item.href}>
+          <a
+            href={item.href}
             target="_blank"
-            className="card"
-            data-aos-delay={delay}
-            data-aos="fade-up"
-            data-aos-duration="550"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-1.5 text-sm transition-colors duration-300 hover:text-[var(--accent-color)]"
           >
-            <p className="font-DM_sans font-medium">{item?.name}</p>
-            <ArrowRight size={14} className="-rotate-45" variant="TwoTone" />
-          </Link>
-        );
-      })}
-    </div>
+            {item.label}
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            >
+              &#8599;
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }

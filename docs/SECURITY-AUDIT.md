@@ -59,22 +59,43 @@ Pemeriksaan AST dan graph analysis (`graphify`) terhadap repository `migrate/nex
 ### Keputusan 1: Dependensi `swiper` (CRITICAL - CVE-2026-27212)
 - **Keputusan**: Hapus dependensi `swiper` dari `package.json` dan lockfile.
 - **Rasional**: Berdasarkan audit Graphify, `swiper` sama sekali tidak pernah di-import di seluruh codebase (`app`, `components`, `utils`). Menghapusnya menutup kerentanan Prototype Pollution tanpa dampak terhadap fungsionalitas aplikasi.
-- **Status**: Disetujui (Akan diterapkan pada tahap eksekusi perbaikan).
+- **Status**: **Selesai Diimplementasikan** (`c6c8d56`).
 
 ### Keputusan 2: DevDependency `postcss` (HIGH & MEDIUM - 4 CVE: CVE-2026-73646, CVE-2026-45623, CVE-2026-69153, CVE-2026-41305)
 - **Keputusan**: Update `postcss` ke `^8.5.23` di `package.json` dan lockfile.
 - **Rasional**: Versi 8.5.23 merupakan versi patch/minor dalam major yang sama (v8) yang menutup seluruh 4 CVE (termasuk Path Traversal). Versi ini juga identik dengan PostCSS yang dibundel internal oleh Next.js 16.4.2, sehingga 100% kompatibel dengan pipeline Tailwind CSS.
-- **Status**: Disetujui (Akan diterapkan pada tahap eksekusi perbaikan).
+- **Status**: **Selesai Diimplementasikan** (`bbda42b`).
 
 ### Keputusan 3: Transitive Dependencies via `overrides` & Lockfile Update
-- **Keputusan**: Tambahkan block `overrides` pada `package.json` untuk memaksa resolusi patch aman pada sub-dependensi tooling build/lint (termasuk `brace-expansion`, `minimatch`, `js-yaml`, `cross-spawn`, `flatted`, `nanoid`, `picomatch`, `yaml`), kemudian jalankan `bun update` untuk meregenerasi lockfile.
-- **Rasional**: Tooling upstream (seperti eslint, tailwindcss v3) seringkali lambat meng-update semver range dependensi internal mereka. Fitur `overrides` (didukung native oleh npm dan bun) memastikan tidak ada package usang berstatus CVE yang tersisa di lockfile.
-- **Status**: Disetujui (Akan diterapkan pada tahap eksekusi perbaikan).
+- **Keputusan**: Tambahkan block `overrides` pada `package.json` untuk memaksa resolusi patch aman pada sub-dependensi tooling build/lint (termasuk `brace-expansion`, `minimatch`, `js-yaml`, `cross-spawn`, `flatted`, `nanoid`, `picomatch`, `yaml`, `@babel/runtime`), kemudian perbarui lockfile.
+- **Rasional**: Tooling upstream (seperti eslint, tailwindcss v3) seringkali lambat meng-update semver range dependensi internal mereka. Fitur `overrides` memastikan tidak ada package usang berstatus CVE yang tersisa di lockfile.
+- **Status**: **Selesai Diimplementasikan** (`25cac4c`).
 
 ### Keputusan 4: Sinkronisasi Lockfile untuk GitHub Dependabot
 - **Keputusan**: Pertahankan `bun.lock` untuk workflow pengembangan lokal cepat berbasis Bun, dan buat `package-lock.json` yang sinkron via `npm i --package-lock-only`.
 - **Rasional**: GitHub Dependabot secara native memonitor `package-lock.json` pada branch default. Menyertakan `package-lock.json` yang sinkron menjamin GitHub Security Dashboard secara instan memvalidasi dan menutup seluruh 67 alert Dependabot begitu branch ini di-push/merge ke upstream.
-- **Status**: Disetujui (Akan diterapkan pada tahap eksekusi perbaikan).
+- **Status**: **Selesai Diimplementasikan** (`e7f4464`).
+
+---
+
+## 4. Hasil Verifikasi Sistem & Pengujian
+
+- **Next.js Production Build**: `bun run build` sukses (Turbopack, compiled in 29s, TypeScript 10.3s, 4/4 static pages generated).
+- **Linting & Code Quality**: `eslint .` sukses (0 errors, 0 warnings).
+- **Dev Server Validation**: Dev server berjalan pada port 3000, `GET http://localhost:3000` merespons dengan `HTTP 200 OK` (SSR/SSG markup ter-render sempurna).
+
+---
+
+## 5. Temuan Non-Keamanan (Unused Dependencies)
+
+Berdasarkan audit Graphify & AST, ditemukan dependensi langsung berikut yang saat ini tidak dipanggil di kode aplikasi:
+- `aos`: ^2.3.4
+- `react-device-detect`: ^2.2.3
+- `react-icons`: ^4.11.0
+- `typewriter-effect`: ^2.21.0
+
+*Catatan: Dependensi di atas tidak memiliki alert kerentanan keamanan saat ini dan tidak diubah sesuai aturan konservatif audit keamanan.*
+
 
 
 

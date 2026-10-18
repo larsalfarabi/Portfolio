@@ -1,9 +1,10 @@
 import CardTech from "@/utils/cardTech";
 import Divider from "@/utils/divider";
 import { MotionHeader } from "@/utils/motionHeader";
+import type { ReactNode } from "react";
 
 interface TechItem {
-  icon: JSX.Element;
+  icon: ReactNode;
   name: string;
   content: string;
 }

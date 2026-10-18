@@ -104,8 +104,21 @@ flowchart LR
   - `bun run dev`: Lolos uji HTTP server lokal (`http://localhost:3000` status code 200).
 - **Catatan & Catatan Khusus**: Tidak ada breaking change yang memicu regresi pada komponen halaman utama. Siap untuk Tahap 2 (Next.js 15.x & React 19).
 
-### Tahap 2: 14.2.x → 15.x
-- **Status**: Belum dimulai.
+### Tahap 2: 14.2.x → 15.x & React 19 (Issue #4)
+- **Status**: Selesai & Terverifikasi Stabil (100% Lolos)
+- **Versi yang Dicapai**: Next.js v15.5.28, React 19.3.1, React-DOM 19.3.1, eslint-config-next v15.5.28
+- **Berkas yang Berubah**:
+  - `package.json`: Upgrade `next` ke `^15.5.28`, `react` dan `react-dom` ke `^19.0.0`, `@types/react` dan `@types/react-dom` ke `^19.0.0`, serta `eslint-config-next` ke `^15.5.28`.
+  - `components/tech/tech.tsx`: Penyesuaian tipe `icon` dari `JSX.Element` menjadi `ReactNode` (`import type { ReactNode } from "react"`) sesuai standar tipe React 19.
+  - `bun.lock`: Lockfile diperbarui secara otomatis oleh Bun.
+- **Hasil Verifikasi**:
+  - `bun install`: Sukses terpasang dengan lockfile tersimpan.
+  - `bun run lint`: Lolos 100% tanpa warning/error (`✔ No ESLint warnings or errors`).
+  - `bun run build`: Lolos 100% (`✓ Compiled successfully in 16.6s`, `✓ Generating static pages 5/5`).
+  - `bun run dev`: Lolos uji HTTP runtime server (`http://localhost:3000` status code 200).
+- **Catatan & Catatan Khusus**:
+  - `next lint` memberikan informasi deprecation bahwa perintah tersebut akan dihapus di Next.js 16 (akan dimigrasikan ke ESLint CLI langsung di Tahap 3).
+  - Pustaka animasi GSAP, Framer Motion, dan Lenis berfungsi dengan baik di bawah React 19 tanpa crash atau peer conflict fatal.
 
 ### Tahap 3: 15.x → 16.x
-- **Status**: Belum dimulai.
+- **Status**: Siap dieksekusi.

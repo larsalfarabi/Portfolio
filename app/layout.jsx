@@ -3,11 +3,12 @@ import SplashScreen from "@/components/splashScreen/SplashScreen";
 import "@/styles/globals.css";
 import Cursor from "@/utils/cursor";
 import { useReveal } from "@/utils/reveal";
-import { SmoothScrolling } from "@/utils/smoothScrolling";
+import { ScrollSync } from "@/utils/smoothScrolling";
+import { ReactLenis } from "@studio-freight/react-lenis";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
-import { useLayoutEffect, useState } from "react";
+import { Space_Grotesk } from "next/font/google";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 const sans = Space_Grotesk({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ const sans = Space_Grotesk({
 
 export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
+  const lenisRef = useRef();
 
   useLayoutEffect(() => {
     const timer = setTimeout(() => {
@@ -28,18 +30,44 @@ export default function RootLayout({ children }) {
   // Dijalankan setelah splash selesai, saat section sudah ada di DOM.
   useReveal(!isLoading);
 
+  useEffect(() => {
+    function update(time) {
+      lenisRef.current?.lenis?.raf(time);
+    }
+
+    const rafId = requestAnimationFrame(update);
+
+    return () => cancelAnimationFrame(rafId);
+  }, []);
+
   return (
     <html lang="id" className={`${sans.variable}`}>
       <body className="font-sans antialiased">
         {isLoading ? (
           <SplashScreen />
         ) : (
-          <SmoothScrolling>
+          <>
+            <ReactLenis
+              root
+              options={{
+                zoom: 1,
+                lerp: 0.05,
+                smooth: true,
+                smoothTouch: false,
+                syncTouch: false,
+                touchMultiplier: 1,
+                normalizeWheel: false,
+                wheelMultiplier: 1,
+                autoRaf: false,
+              }}
+              ref={lenisRef}
+            />
+            <ScrollSync />
             <Cursor />
             {children}
             <SpeedInsights />
             <Analytics />
-          </SmoothScrolling>
+          </>
         )}
       </body>
     </html>

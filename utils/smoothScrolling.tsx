@@ -14,7 +14,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
  * (2) Tanpa penanganan tautan jangkar, klik menu melompat seketika sementara
  *     Lenis masih menganimasikan posisi lama, sehingga muncul sentakan.
  */
-function ScrollSync() {
+export function ScrollSync() {
   // useLayoutEffect berjalan sebelum efek pasif, jadi plugin sudah terdaftar
   // saat useLenis memasang callback-nya.
   useLayoutEffect(() => {
@@ -83,6 +83,7 @@ export const SmoothScrolling = ({ children }: { children: any }) => {
         touchMultiplier: 1,
         normalizeWheel: false,
         wheelMultiplier: 1,
+        autoRaf: false,
       }}
     >
       <ScrollSync />

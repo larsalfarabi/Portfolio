@@ -1,10 +1,44 @@
 "use client";
-import { useCallback } from "react";
+import { useLenis } from "@studio-freight/react-lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useCallback, useEffect, useLayoutEffect } from "react";
 
 export const ScrollToTop = () => {
-  const scrollToTop = useCallback(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
   }, []);
+
+  const lenis = useLenis(ScrollTrigger.update);
+
+  const ref = useCallback((el: any) => {
+    if (!el) return;
+    gsap.set(el, { opacity: 0, pointerEvents: "none" });
+  }, []);
+
+  useEffect(() => {
+    if (!lenis) return;
+
+    const tl = gsap.timeline({
+      paused: true,
+      defaults: { duration: 0.25, ease: "power2.out" },
+    });
+
+    tl.to(".to-top-btn", { opacity: 1, pointerEvents: "auto" });
+
+    const update = () => {
+      const y = lenis.y ?? 0;
+      if (y > 100) tl.play();
+      else tl.reverse();
+    };
+
+    document.addEventListener("scroll", update);
+    return () => document.removeEventListener("scroll", update);
+  }, [lenis]);
+
+  const scrollToTop = useCallback(() => {
+    lenis.scrollTo(0, { duration: 1.4, easing: (t) => 1 - Math.pow(1 - t, 3) });
+  }, [lenis]);
 
   // Sebelumnya ada useEffect yang memanggil scrollToTop saat komponen dipasang,
   // sehingga halaman menggulir ke atas sendiri saat dibuka. Dihapus.

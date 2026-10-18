@@ -295,7 +295,7 @@ export const ai = [];
 export const sosmed = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/larsalfarabi/",
+    href: "https://www.linkedin.com/in/lars-alfarabi-gunawan/",
   },
   { label: "GitHub", href: "https://github.com/larsalfarabi" },
 ];

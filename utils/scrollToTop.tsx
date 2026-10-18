@@ -2,7 +2,7 @@
 import { useLenis } from "@studio-freight/react-lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useCallback, useEffect, useLayoutEffect } from "react";
+import { useCallback, useLayoutEffect } from "react";
 
 export const ScrollToTop = () => {
   useLayoutEffect(() => {
@@ -10,31 +10,6 @@ export const ScrollToTop = () => {
   }, []);
 
   const lenis = useLenis(ScrollTrigger.update);
-
-  const ref = useCallback((el: any) => {
-    if (!el) return;
-    gsap.set(el, { opacity: 0, pointerEvents: "none" });
-  }, []);
-
-  useEffect(() => {
-    if (!lenis) return;
-
-    const tl = gsap.timeline({
-      paused: true,
-      defaults: { duration: 0.25, ease: "power2.out" },
-    });
-
-    tl.to(".to-top-btn", { opacity: 1, pointerEvents: "auto" });
-
-    const update = () => {
-      const y = lenis.y ?? 0;
-      if (y > 100) tl.play();
-      else tl.reverse();
-    };
-
-    document.addEventListener("scroll", update);
-    return () => document.removeEventListener("scroll", update);
-  }, [lenis]);
 
   const scrollToTop = useCallback(() => {
     lenis.scrollTo(0, { duration: 1.4, easing: (t) => 1 - Math.pow(1 - t, 3) });

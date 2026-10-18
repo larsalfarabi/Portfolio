@@ -2,7 +2,7 @@
 import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState, useSyncExternalStore } from "react";
 
 /**
  * Menyatukan Lenis dengan GSAP ScrollTrigger, dan menggulirkan tautan jangkar
@@ -53,14 +53,26 @@ export function ScrollSync() {
   return null;
 }
 
-export const SmoothScrolling = ({ children }: { children: any }) => {
-  const [reduceMotion, setReduceMotion] = useState(false);
+function subscribeReduceMotion(callback: () => void) {
+  const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  mediaQuery.addEventListener("change", callback);
+  return () => mediaQuery.removeEventListener("change", callback);
+}
 
-  useEffect(() => {
-    setReduceMotion(
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-    );
-  }, []);
+function getReduceMotionSnapshot() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function getReduceMotionServerSnapshot() {
+  return false;
+}
+
+export const SmoothScrolling = ({ children }: { children: any }) => {
+  const reduceMotion = useSyncExternalStore(
+    subscribeReduceMotion,
+    getReduceMotionSnapshot,
+    getReduceMotionServerSnapshot,
+  );
 
   // Tanpa scroll halus: konten tetap bisa digulir seperti biasa, tanpa lerp.
   if (reduceMotion) return <>{children}</>;

@@ -120,5 +120,19 @@ flowchart LR
   - `next lint` memberikan informasi deprecation bahwa perintah tersebut akan dihapus di Next.js 16 (akan dimigrasikan ke ESLint CLI langsung di Tahap 3).
   - Pustaka animasi GSAP, Framer Motion, dan Lenis berfungsi dengan baik di bawah React 19 tanpa crash atau peer conflict fatal.
 
-### Tahap 3: 15.x → 16.x
-- **Status**: Siap dieksekusi.
+### Tahap 3: 15.x → 16.x (Issue #5)
+- **Status**: Selesai & Terverifikasi Stabil (100% Lolos)
+- **Versi yang Dicapai**: Next.js v16.4.2 (Turbopack Default), ESLint v9.39.5, eslint-config-next v16.4.2, React 19.3.1
+- **Berkas yang Berubah**:
+  - `package.json`: Upgrade `next` dan `eslint-config-next` ke `^16.4.2`, upgrade `eslint` ke `^9`, dan perbarui script `"lint": "eslint ."`.
+  - `eslint.config.mjs`: Dibuat menggunakan Flat Config resmi Next.js 16 (`eslint-config-next/core-web-vitals`).
+  - `.eslintrc.json`: Dihapus (digantikan oleh `eslint.config.mjs`).
+  - `utils/smoothScrolling.tsx`: Refactor `prefers-reduced-motion` menggunakan `useSyncExternalStore` dari React 19 untuk mencegah cascading renders.
+  - `tsconfig.json`: Otomatis dikonfigurasi oleh compiler Next.js 16 (`jsx: "react-jsx"`, include `.next/dev/types/**/*.ts`).
+  - `bun.lock`: Lockfile diperbarui secara otomatis oleh Bun.
+- **Hasil Verifikasi**:
+  - `bun install`: Sukses terpasang dengan lockfile tersimpan.
+  - `bun run lint`: Lolos 100% tanpa warning/error (`$ eslint .`).
+  - `bun run build`: Lolos 100% dengan Turbopack (`▲ Next.js 16.4.2 (Turbopack)`, `✓ Compiled successfully in 13.8s`, `✓ Generating static pages 4/4`).
+  - `bun run dev`: Lolos uji HTTP runtime server (`http://localhost:3000` status code 200).
+- **Catatan Akhir**: Seluruh tahapan migrasi incremental (13.5.4 → 14.x → 15.x → 16.x) telah tuntas, stabil, dan terverifikasi penuh.

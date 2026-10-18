@@ -15,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -36,8 +36,12 @@
     "app/layout.jsx",
     "app/page.jsx",
     "components/navbar/navbar.jsx",
-    "components/tech/tech.tsx"
-, "app/email/page.jsx", "utils/motionCard.tsx", "utils/data.js"  ],
+    "components/tech/tech.tsx",
+    "app/email/page.jsx",
+    "utils/motionCard.tsx",
+    "utils/data.js",
+    ".next/dev/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ]

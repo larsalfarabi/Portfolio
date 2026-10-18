@@ -9,9 +9,9 @@ import Tech from "@/components/tech/tech";
 import { ai, experience, services, tech, tool } from "@/utils/data";
 
 export const metadata = {
-  title: "Lars Alfarabi Gunawan — Fullstack & Mobile Developer",
+  title: "Lars Alfarabi Gunawan — Fullstack & Mobile Developer | Backend, Web, Mobile",
   description:
-    "Portofolio Lars Alfarabi Gunawan, fullstack & mobile developer. Backend, web, dan aplikasi mobile dengan Next.js, Node.js, dan Flutter.",
+    "Saya membangun backend yang skalabel dan aplikasi mobile yang nyaman dipakai. Fullstack & mobile developer dengan Next.js, Node.js, dan Flutter. Terbuka untuk proyek freelance dan posisi penuh waktu.",
 };
 
 // Section yang datanya masih kosong tidak dirender (lihat Experience/Services),

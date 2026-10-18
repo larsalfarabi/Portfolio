@@ -1,4 +1,3 @@
-import Thumbnail from "@/public/1702027598035.jpg";
 import Expressjs from "@/public/Expressjs.svg";
 import VS from "@/public/Figma.svg";
 import Flutter from "@/public/Flutter.svg";
@@ -299,7 +298,6 @@ export const sosmed = [
     href: "https://www.linkedin.com/in/larsalfarabi/",
   },
   { label: "GitHub", href: "https://github.com/larsalfarabi" },
-  { label: "Bento", href: "https://bento.me/alfarabi" },
 ];
 
 // ============================================================================
@@ -325,7 +323,8 @@ export const project = [
     id: "aplikasi-rihlatul",
     thumbnail: "https://picsum.photos/seed/rihlatul-guide/600/400",
     name: "Aplikasi Rihlatul",
-    description: "Aplikasi panduan (mobile) untuk membantu ibadah jamaah haji dan umrah secara interaktif.",
+    description:
+      "Aplikasi panduan (mobile) untuk membantu ibadah jamaah haji dan umrah secara interaktif.",
     role: "Backend Developer",
     tahun: "2023",
     tech: ["Flutter", "Nest.js", "MySQL"],
@@ -335,7 +334,8 @@ export const project = [
     id: "website-portfolio",
     thumbnail: "https://picsum.photos/seed/portfolio-2024/600/400",
     name: "Website Portfolio",
-    description: "Website pribadi responsif untuk menampilkan karya, tech stack, dan profil profesional.",
+    description:
+      "Website pribadi responsif untuk menampilkan karya, tech stack, dan profil profesional.",
     role: "Fullstack Developer",
     tahun: "2024",
     tech: ["Next.js", "Tailwind CSS"],
@@ -345,7 +345,8 @@ export const project = [
     id: "lost-and-found-system",
     thumbnail: "https://picsum.photos/seed/lost-found-2025/600/400",
     name: "Lost & Found System",
-    description: "Platform web kampus untuk pelacakan dan klaim barang hilang dengan sistem verifikasi admin.",
+    description:
+      "Platform web kampus untuk pelacakan dan klaim barang hilang dengan sistem verifikasi admin.",
     role: "Backend Developer",
     tahun: "2025",
     tech: ["React", "Express.js", "Prisma ORM", "PostgreSQL"],
@@ -355,7 +356,8 @@ export const project = [
     id: "host-briefing-dashboard",
     thumbnail: "https://picsum.photos/seed/briefing-dashboard/600/400",
     name: "Host Briefing Dashboard",
-    description: "Dashboard manajemen briefing live streaming untuk meminimalkan kesalahan operasional jadwal siaran.",
+    description:
+      "Dashboard manajemen briefing live streaming untuk meminimalkan kesalahan operasional jadwal siaran.",
     role: "Fullstack Developer",
     tahun: "2025",
     tech: ["Next.js", "Express.js", "Prisma ORM", "PostgreSQL"],
@@ -382,14 +384,15 @@ export const project = [
 export const profile = {
   nama: "Lars Alfarabi Gunawan",
   peran: "Fullstack & Mobile Developer",
-  tagline: "Saya membangun backend yang skalabel dan aplikasi mobile yang mulus.",
+  tagline:
+    "Saya membangun backend yang skalabel dan aplikasi mobile yang nyaman dipakai.",
   lokasi: "Indonesia",
-  email: "", // [ISI_MANUAL] mis. "lars@example.com"
+  email: "msyamil404@gmail.com", // [ISI_MANUAL] mis. "lars@example.com"
   foto: "/Lars Alfarabi Gunawan-Professional 1.png",
   bio: [
-    "Developer yang berfokus pada React, Next.js, Node.js, dan Flutter. Terbiasa merancang REST API, skema database, dan antarmuka yang bersih.",
-    "Saya menikmati pekerjaan di titik temu antara backend dan antarmuka: memastikan data mengalir dengan benar sekaligus nyaman dipakai pengguna.",
-    "Saat ini terbuka untuk posisi fullstack maupun mobile, baik tim penuh waktu maupun proyek lepas.",
+    "Saya berfokus pada React, Next.js, Node.js, dan Flutter. Saya merancang REST API, skema database, dan antarmuka yang bersih agar data mengalir dengan benar dan nyaman dipakai pengguna.",
+    "Saya menikmati pekerjaan di titik temu backend dan antarmuka — data harus mengalir dengan benar, dan antarmuka harus nyaman dipakai.",
+    "Saya terbuka untuk posisi fullstack atau mobile, kantor atau proyek lepas.",
   ],
 };
 
@@ -423,18 +426,18 @@ export const services = [
     nomor: "01",
     judul: "Pengembangan Backend",
     deskripsi:
-      "Merancang REST API, skema database, dan logika bisnis yang rapi serta mudah dirawat.",
+      "REST API dan skema database yang rapi, sehingga fitur Anda bisa berkembang tanpa ribet untuk dirawat.",
   },
   {
     nomor: "02",
     judul: "Pengembangan Web",
     deskripsi:
-      "Membangun antarmuka web responsif dengan Next.js dan React, dari rancangan sampai deploy.",
+      "antarmuka web responsif dengan Next.js dan React, dari desain hingga peluncuran.",
   },
   {
     nomor: "03",
     judul: "Aplikasi Mobile",
     deskripsi:
-      "Membuat aplikasi lintas platform dengan Flutter yang terhubung ke backend yang sama.",
+      "Aplikasi mobile lintas platform dengan Flutter terhubung ke backend yang sama.",
   },
 ];

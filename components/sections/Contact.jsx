@@ -16,8 +16,8 @@ export default function Contact() {
         data-reveal
         className="mt-6 max-w-xl text-sm leading-relaxed text-[var(--text-muted)] md:text-base"
       >
-        Ada posisi yang cocok, atau ingin berdiskusi soal proyek? Kirim pesan
-        lewat email atau LinkedIn — saya balas secepatnya.
+        Ada posisi yang cocok atau ingin berdiskusi soal proyek? Kirim email
+        atau hubungi saya di LinkedIn, saya balas secepatnya.
       </p>
 
       <div data-reveal className="mt-8">

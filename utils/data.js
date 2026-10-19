@@ -1,32 +1,39 @@
+import DBeaverIcon from "@/public/DBeaver.svg";
 import Expressjs from "@/public/Expressjs.svg";
-import VS from "@/public/Figma.svg";
+import Figma from "@/public/figma.svg";
+import Firebase from "@/public/firebase.svg";
 import Flutter from "@/public/Flutter.svg";
+import Git from "@/public/git.svg";
 import Github from "@/public/Github.svg";
+import Golang from "@/public/Golang.svg";
+import GoogleColab from "@/public/googlecolab.svg";
+import Mysql from "@/public/mySql.svg";
 import Nestjs from "@/public/Nest.svg";
 import Nextjs from "@/public/Nextjs.svg";
 import Nodejs from "@/public/NodeJs.svg";
+import Postman from "@/public/postman.svg";
 import ReactJs from "@/public/ReactJs.svg";
 import TypeScript from "@/public/TypeScript.svg";
-import Firebase from "@/public/firebase.svg";
-import Mysql from "@/public/mySql.svg";
-import { Figma, Html3, Html5, JavaScript } from "iconsax-react";
+import { Html3, Html5, JavaScript, Python } from "iconsax-react";
 import Image from "next/image";
+import DartIcon from "@/public/dart.svg";
+import VS from "@/public/vs-code.svg";
 
 export const tech = [
   {
-    icon: <Html5 className="h-8 w-8" />,
+    icon: <Html5 className="h-8 w-8" variant="Bold" color="#303030" />,
     name: "HTML",
     content:
       "HTML (HyperText Markup Language) is a standard markup language for creating web pages. HTML uses tags to define the structure and content of web pages.",
   },
   {
-    icon: <JavaScript className="h-8 w-8" variant="Bold" />,
+    icon: <JavaScript className="h-8 w-8" variant="Bold" color="#303030" />,
     name: "JS",
     content:
       "JS (JavaScript) is a high-level, dynamic programming language used to make web pages more interactive. JavaScript can be used to add a wide variety of functionality to web pages.",
   },
   {
-    icon: <Html3 className="h-8 w-8" />,
+    icon: <Html3 className="h-8 w-8" variant="Bold" color="#303030" />,
     name: "CSS",
     content:
       "CSS (Cascading Style Sheets) is a programming language used to design and organize the appearance of web pages.",
@@ -38,7 +45,7 @@ export const tech = [
         src={TypeScript}
         width={32}
         height={32}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -50,10 +57,44 @@ export const tech = [
     icon: (
       <Image
         priority
+        src={DartIcon}
+        width={32}
+        height={32}
+        alt="Follow us on Twitter"
+      />
+    ),
+    name: "Dart",
+    content:
+      "Dart is a programming language developed by Google. It is used to build web, mobile, and desktop applications. Dart is a statically typed language with a syntax similar to Java and C++.",
+  },
+  {
+    icon: (
+      <Image
+        priority
+        src={Golang}
+        width={32}
+        height={32}
+        alt="Follow us on Twitter"
+      />
+    ),
+    name: "Go",
+    content:
+      "Go is a statically typed, compiled programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically influenced by C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency.",
+  },
+  {
+    icon: <Python color="#303030" variant="Bold" className="h-8 w-8" />,
+    name: "Python",
+    content:
+      "Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility. It was created by Guido van Rossum and first released in 1991.",
+  },
+  {
+    icon: (
+      <Image
+        priority
         src={ReactJs}
         width={32}
         height={32}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -82,7 +123,7 @@ export const tech = [
         src={Nodejs}
         width={32}
         height={32}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -97,7 +138,7 @@ export const tech = [
         src={Nestjs}
         width={32}
         height={32}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -112,7 +153,7 @@ export const tech = [
         src={Mysql}
         width={32}
         height={32}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -127,7 +168,7 @@ export const tech = [
         src={Flutter}
         width={25.5}
         height={25.5}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -142,7 +183,7 @@ export const tech = [
         src={Firebase}
         width={23}
         height={23}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -157,8 +198,8 @@ export const tech = [
         priority
         width={31.5}
         height={31.5}
-        color="#e8e8e8"
-        className="text-[#e8e8e8]"
+        color="#303030"
+        className="text-[#303030]"
         alt="Follow us on Twitter"
       />
     ),
@@ -172,11 +213,10 @@ export const tool = [
   {
     icon: (
       <Image
-        priority
         src={VS}
         width={32}
         height={32}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -187,7 +227,15 @@ export const tool = [
   },
 
   {
-    icon: <Figma className="h-8 w-8" />,
+    icon: (
+      <Image
+        priority
+        src={Figma}
+        width={32}
+        height={32}
+        alt="Figma"
+      />
+    ),
     name: "Figma",
     content:
       "Figma is a cloud-based design application used to create user interfaces (UI) and user experiences (UX).",
@@ -196,10 +244,10 @@ export const tool = [
     icon: (
       <Image
         priority
-        src={VS}
+        src={Postman}
         width={32}
         height={32}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -211,10 +259,10 @@ export const tool = [
     icon: (
       <Image
         priority
-        src={VS}
+        src={DBeaverIcon}
         width={32}
         height={32}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -227,10 +275,10 @@ export const tool = [
     icon: (
       <Image
         priority
-        src={VS}
+        src={GoogleColab}
         width={32}
         height={32}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -246,7 +294,7 @@ export const tool = [
         src={Github}
         width={33}
         height={33}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -258,10 +306,10 @@ export const tool = [
     icon: (
       <Image
         priority
-        src={Github}
+        src={Git}
         width={33}
         height={33}
-        color="#e8e8e8"
+        color="#303030"
         alt="Follow us on Twitter"
       />
     ),
@@ -408,13 +456,34 @@ export const profile = {
 //   tipe      : "Full-time" | "Kontrak" | "Magang" | "Freelance"
 // ============================================================================
 export const experience = [
-  // {
-  //   periode: "2024 — Sekarang",
-  //   peran: "Backend Developer",
-  //   organisasi: "Nama Perusahaan",
-  //   lokasi: "Jakarta",
-  //   tipe: "Full-time",
-  // },
+  {
+    periode: "Januari 2024 — April 2024",
+    peran: "IT Developer",
+    organisasi: "Yayasan Kesehatan Pertamina",
+    lokasi: "Jakarta",
+    tipe: "Magang",
+  },
+  {
+    periode: "Juni 2024 — Desember 2024",
+    peran: "IT Helpdesk",
+    organisasi: "Yayasan Kesehatan Pertamina",
+    lokasi: "Jakarta",
+    tipe: "Kontrak",
+  },
+  {
+    periode: "January 2025 — April 2026",
+    peran: "IT Helpdesk & Quality Assurance Junior",
+    organisasi: "Yayasan Kesehatan Pertamina",
+    lokasi: "Jakarta",
+    tipe: "Kontrak",
+  },
+  {
+    periode: "September 2025 — Now",
+    peran: "Fullstack Developer",
+    organisasi: "PT. Aidia Makmur Indonesia",
+    lokasi: "Bogor",
+    tipe: "Freelance",
+  },
 ];
 
 // ============================================================================

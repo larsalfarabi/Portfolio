@@ -16,8 +16,8 @@ import ReactJs from "@/public/ReactJs.svg";
 import TypeScript from "@/public/TypeScript.svg";
 import { Html3, Html5, JavaScript, Python } from "iconsax-react";
 import Image from "next/image";
-import DartIcon from "../public/dart.svg";
-import VS from "../public/vs-code.svg";
+import DartIcon from "@/public/dart.svg";
+import VS from "@/public/vs-code.svg";
 
 export const tech = [
   {
